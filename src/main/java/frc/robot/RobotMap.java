@@ -38,7 +38,7 @@ public class RobotMap {
 
     public static final TalonSRX leftMotor1 = new TalonSRX(0);
     public static final TalonSRX leftMotor2 = new TalonSRX(1);
-    public static final TalonSRX leftMotor3 = new TalonSRX(2);
+    public static final TalonSRX tester3 = new TalonSRX(2);
 
     public static final Solenoid random4 = new Solenoid(0);
     public static final Solenoid shiftPTO = new Solenoid(5);
