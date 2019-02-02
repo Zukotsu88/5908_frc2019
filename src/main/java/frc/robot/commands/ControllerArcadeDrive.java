@@ -8,17 +8,21 @@
 package frc.robot.commands;
 
 import edu.wpi.first.wpilibj.command.Command;
+import edu.wpi.first.wpilibj.Joystick;
+
 import frc.robot.subsystems;
-import frc.robot.IO;
+import frc.robot.OI;
 
 import java.lang.*;
 
 public class ControllerArcadeDrive extends Command {
+
+  private Joystick xbox = OI.xbox0;
+
   public ControllerArcadeDrive() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
     requires(subsystems.DriveTrainSubsystem);
-
   }
 
   // Called just before this Command runs the first time
@@ -50,12 +54,12 @@ public class ControllerArcadeDrive extends Command {
   protected void interrupted() {
   }
 
-  private float getX(){
-    return Math.cos(IO.xbox0.getPOV());
+  private double getX(){
+    return Math.cos(xbox.getPOV());
   }
 
-  private float getY(){
-    return Math.sin(IO.xbox0.getPOV());
+  private double getY(){
+    return Math.sin(xbox.getPOV());
   }
 
 

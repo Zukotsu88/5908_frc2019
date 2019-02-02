@@ -14,13 +14,16 @@ import com.ctre.phoenix.motorcontrol.TalonSRX;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.TimedRobot;
+import edu.wpi.first.wpilibj.drive.DifferentialDrive;
+import edu.wpi.first.wpilibj.SpeedControllerGroup;
+
 import frc.robot.RobotMap;
-import frc.robot.Commands;
+import frc.robot.commands;
 
 /**
  * Add your docs here.
  */
-public class DriveTrain extends Subsystem {
+public class DriveTrainSubsystem extends Subsystem {
   // Put methods for controlling this subsystem
   // here. Call these from Commands.
 
@@ -33,36 +36,17 @@ public class DriveTrain extends Subsystem {
   SpeedControllerGroup rightMotor = new SpeedControllerGroup(driveRightMotorOne, driveRightMotorTwo);
   DifferentialDrive diffDrive = new DifferentialDrive(leftMotor, rightMotor);
 
-  public DriveTrain() {
+  public DriveTrainSubsystem() {
     // invert the right motors
     driveRightMotorOne.invert();
     driveRightMotorTwo.invert();
-
   }
 
   @Override
   public void initDefaultCommand() {
     // Set the default command for a subsystem here.
     // setDefaultCommand(new MySpecialCommand());
-    setDefaultCommand(new Commands.ControllerArcaneDrive());
+    setDefaultCommand(new commands.ControllerArcadeDrive());
   }
-
-  public void setRightSpeed(double speed) {
-		if(speed<-1) speed =-1;
-		if(speed>1) speed=1;
-		driveRightRearMotor.set(speed);
-		driveRightFrontMotor.set(speed);
-	}
-	
-	/**
-	 * Set the speed of the two left motors
-	 * @param speed between -1 and 1
-	 */
-	public void setLeftSpeed(double speed) {
-		if(speed<-1) speed =-1;
-		if(speed>1) speed=1;
-		driveLeftRearMotor.set(speed);
-		driveLeftFrontMotor.set(speed);
-	}
-
+  
 }
