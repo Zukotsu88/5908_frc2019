@@ -30,23 +30,19 @@ public class RobotMap {
   // public static int rangefinderPort = 1;
   // public static int rangefinderModule = 1;
 
+	/*done----------------DRIVE----------------*/
+	public static final int driveLeftOne = 1; // 
+	public static final int driveLeftTwo = 2; // 
+	public static final int driveRightOne = 3; // 
+	public static final int driveRightTwo = 4; //
+  /*-------------------------------------*/
+  
+  /*done----------------Elevator ----------------*/
+	public static final int elevatorLeft = 5; // 
+	public static final int elevatorRight = 6; // 
+  /*-------------------------------------*/
 
-  public static final class DriveMap {
-    public static final TalonSRX rightMotor1 = new TalonSRX(15);
-    public static final TalonSRX rightMotor2 = new TalonSRX(14);
-    public static final TalonSRX rightMotor3 = new TalonSRX(13);
 
-    public static final TalonSRX leftMotor1 = new TalonSRX(0);
-    public static final TalonSRX leftMotor2 = new TalonSRX(1);
-    public static final TalonSRX fsfhgiccjvldnhkfebh = new TalonSRX(2);
-
-    public static final Solenoid climbPTO = new Solenoid(0);
-    public static final Solenoid shiftPTO = new Solenoid(5);
-
-    public static final Solenoid tester1 = new Solenoid(0);
-    public static final Solenoid tester2 = new Solenoid(5);   
-
-  }
 
 
 

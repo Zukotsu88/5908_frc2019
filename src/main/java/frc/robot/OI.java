@@ -42,8 +42,8 @@ public class OI {
   private static final int    RIGHT_THUMBSTICK_Y_AXIS_ID  = 5;  
 
 
-Joystick xbox0 = new Joystick(0);
-Joystick xbox1 = new Joystick(1);
+public Joystick xbox0 = new Joystick(0);
+public Joystick xbox1 = new Joystick(1);
 
 
 }
