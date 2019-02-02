@@ -33,7 +33,6 @@ public class ControllerArcadeDrive extends Command {
   // Called repeatedly when this Command is scheduled to run
   @Override
   protected void execute() {
-    subsystems.DriveTrainSubsystem.driveLeftMotorOne.set(IO.xbox0);
     subsystems.DriveTrainSubsystem.diffDrive.arcadeDrive(getY(), getX());
   }
 
