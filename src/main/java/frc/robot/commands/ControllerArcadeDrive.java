@@ -22,7 +22,7 @@ public class ControllerArcadeDrive extends Command {
   public ControllerArcadeDrive() {
     // Use requires() here to declare subsystem dependencies
     // eg. requires(chassis);
-    requires(subsystems.DriveTrainSubsystem);
+    requires(subsystems.DriveTrainSubsystem());
   }
 
   // Called just before this Command runs the first time
